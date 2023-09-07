@@ -1,0 +1,152 @@
+.home {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  background-attachment: fixed;
+}
+
+.video-home {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  pointer-events: none;
+}
+
+.home-content {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  z-index: 1001;
+  position: relative;
+  padding: 20px;
+}
+
+.p-home {
+  margin-bottom: 20px;
+  font-weight: 900;
+  font-size: 24px;
+  text-align: center;
+}
+
+.p-ou {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-size: 14px;
+  text-align: center;
+}
+
+.button-container {
+  position: absolute;
+  bottom: 40px; /* Ajuste esse valor conforme necessário */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.button-71 {
+  background-color: #164577;
+  border: 0;
+  border-radius: 56px;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: system-ui, -apple-system, system-ui, "Segoe UI", Roboto, Ubuntu,
+    "Helvetica Neue", sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  outline: 0;
+  padding: 8px 20px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.3s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-71:before {
+  background-color: initial;
+  background-image: linear-gradient(#fff 0, rgba(255, 255, 255, 0) 100%);
+  border-radius: 125px;
+  content: "";
+  height: 40%;
+  left: 8%;
+  opacity: 0.5;
+  position: absolute;
+  top: 0;
+  transition: all 0.3s;
+  width: 85%;
+}
+
+.button-71:hover {
+  box-shadow: rgba(255, 255, 255, 0.2) 0 3px 15px inset,
+    rgba(0, 0, 0, 0.1) 0 3px 5px, rgba(0, 0, 0, 0.1) 0 10px 13px;
+  transform: scale(1.05);
+}
+
+.button-71 a {
+  color: #fff;
+}
+
+@media (min-width: 768px) {
+  .home {
+    width: 100%;
+  }
+
+  .button-71 {
+    padding: 18px 48px;
+    font-size: 15px;
+  }
+
+  .p-home {
+    font-size: 32px;
+  }
+
+  .p-ou {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 400px) {
+  .home {
+    width: 100vw;
+  }
+
+  video {
+    width: 100vw;
+  }
+
+  .home-content {
+    padding: 20px 0; /* Remova o padding horizontal */
+  }
+
+  .p-home {
+    font-size: 38px;
+  }
+
+  .button-71 {
+    padding: 15px 30px; /* Ajuste o padding conforme necessário */
+    font-size: 14px; /* Ajuste o tamanho da fonte conforme necessário */
+  }
+}

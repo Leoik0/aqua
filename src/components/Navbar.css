@@ -1,0 +1,135 @@
+/* Estilos para a barra de navegação */
+.navbar {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff;
+  width: 100%;
+  height: auto;
+  z-index: 1200;
+  top: 0;
+  left: 0;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.4);
+  padding: 8px 0;
+}
+
+/* Estilos para ocultar a barra de navegação */
+.navbar-hidden {
+  display: none;
+}
+
+/* Estilos para o logotipo na barra de navegação */
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  color: #164577;
+}
+
+.nav-p {
+  font-size: 12px;
+  margin-right: 5px;
+}
+
+.nav-span {
+  font-size: 12px;
+}
+
+.hours span {
+  margin: 2px;
+}
+
+/* Estilos para o logotipo da marca */
+.logo {
+  width: 40px;
+  height: 40px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+/* Estilos para os links de navegação */
+.navbar-links {
+  display: flex;
+  flex-direction: row;
+  margin-right: 40px;
+}
+
+.navbar-link {
+  color: #164577;
+  text-decoration: none;
+  font-size: 14px;
+  margin-right: 20px;
+}
+
+.navbar-link:hover {
+  cursor: pointer !important;
+  color: #000;
+  border-bottom: 2px solid #000;
+  padding-bottom: 2px;
+}
+
+/* Estilos para o ícone do menu hamburguer */
+.menu-icon {
+  display: none;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+/* Estilos para a barra de navegação quando o menu hamburguer está aberto */
+.navbar.open {
+  flex-direction: column;
+  height: auto;
+}
+
+/* Estilos para os links de navegação quando o menu hamburguer está aberto */
+.navbar-links.open {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 10px;
+  margin-right: 20px;
+}
+
+/* Ajuste para telas menores que 768px (dispositivos móveis) */
+@media (max-width: 768px) {
+  .navbar {
+    width: 100vw;
+    padding: 14px 0;
+  }
+
+  .logo {
+    display: none;
+  }
+
+  .menu-icon {
+    margin-right: 10px;
+    margin-left: 10px;
+    display: flex;
+  }
+
+  /* Remova a regra display: none; para .navbar-link em dispositivos móveis */
+  .navbar-links .navbar-link {
+    display: none;
+  }
+
+  /* Adicione este trecho para ajustar os links à largura total apenas quando o menu estiver aberto */
+  .navbar.open .navbar-links .navbar-link {
+    display: block;
+    animation: slideIn 0.3s ease-in-out; /* Adicione um efeito de slide-in com duração de 0.3s */
+    animation-fill-mode: forwards; /* Mantenha o estado final após a animação */
+    opacity: 0; /* Comece com opacidade zero (oculto) */
+    transform: translateX(-100%); /* Comece fora da tela à esquerda */
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0; /* Comece com opacidade zero */
+    transform: translateX(-100%); /* Comece fora da tela à esquerda */
+  }
+  to {
+    opacity: 1; /* Termine com opacidade total */
+    transform: translateX(0); /* Termine na posição original */
+  }
+}

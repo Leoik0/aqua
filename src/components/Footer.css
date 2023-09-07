@@ -1,0 +1,148 @@
+.footer {
+  height: auto;
+  width: 100%;
+  background-color: #111;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  position: relative;
+  flex-direction: column;
+}
+
+.fot-box {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.fot-content {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  padding-left: 150px;
+  padding-right: 180px;
+}
+
+.footer-links a {
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.footer-contacts {
+  display: flex;
+
+  justify-content: center;
+}
+
+.footer-contacts a {
+  color: #fff;
+  padding: 2px;
+  margin-right: 10px;
+}
+
+.footer-contacts a:hover {
+  color: #164577;
+}
+
+.footer-links a:hover {
+  color: #164577;
+}
+
+.fot {
+  display: flex;
+  font-size: 32px;
+}
+
+.fot1 {
+  margin-top: 2px;
+}
+
+.copy {
+  height: 40px;
+  width: 100%;
+  color: #fff;
+  background-color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pix {
+  width: 50px;
+  cursor: pointer;
+}
+
+.map {
+  margin-left: 50px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+/* Ajuste para telas menores que 768px (dispositivos móveis) */
+@media (max-width: 768px) {
+  .footer {
+    height: auto;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .map {
+    margin-left: 0;
+  }
+
+  .fot-box {
+    display: flex;
+
+    flex-direction: column;
+  }
+
+  .fot-content {
+    display: flex;
+  }
+
+  .footer-links {
+    padding: 10px;
+    text-align: center;
+    margin-left: 0; /* Remova a margem à esquerda */
+    padding-left: 0; /* Remova o padding à esquerda */
+    width: 100%; /* Ajuste a largura para preencher a tela */
+  }
+
+  .footer-contacts {
+    text-align: center;
+    display: flex;
+    flex-direction: column; /* Altere a direção dos elementos */
+    align-items: center; /* Centralize os elementos */
+    margin-top: 10px; /* Ajuste o espaçamento superior */
+  }
+
+  .footer-contacts a {
+    margin: 5px 30px; /* Ajuste o espaçamento vertical e remova a margem à direita */
+  }
+
+  .pix {
+    margin-left: 20px;
+  }
+
+  .copy {
+    height: 40px;
+    width: 100%;
+    color: #fff;
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Evite que o conteúdo vaze para fora do container */
+  .footer * {
+    overflow-x: hidden;
+  }
+}
